@@ -9,14 +9,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="hero section">
-    <title>Sobre Nosotros | El Buen Viaje</title>
-
+    <title>Catálogo | El Buen Viaje</title>
+    
 
     <link rel="stylesheet" href="css/tailus.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&display=swap"
         rel="stylesheet">
-
+    
     <style>
         body {
             font-family: Urbanist, sans-serif;
@@ -97,8 +97,36 @@
     </header>
 
 <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" />
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+<br><br><br>
+
+<div id="tarjeta" class="hidden fixed inset-0 flex items-center justify-center bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" >
+    <div class="relative m-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+      <div class="mt-3 text-center">
+        <h3 class="text-lg leading-6 font-medium text-gray-900">Confirmar Reserva</h3>
+        <form id="formularioCompra">
+            <div class="mt-2 px-7 py-3">
+              <input type="email" id="email" placeholder="Tu correo electrónico" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            
+          <p class="text-sm text-gray-500">
+            ¿Deseas confirmar tu compra? <br>
+            <strong>No se aceptan devoluciones ni reclamos.</strong>
+          </p>
+        </div>
+        <div class="items-center px-4 py-3">
+          <button id="comprar" class="px-4 py-2 bg-green-500 text-white text-base font-medium rounded-md w-5/12 shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-300">
+            Comprar
+          </button>
+          <button id="cerrar" class="ml-4 px-4 py-2 bg-red-500 text-white text-base font-medium rounded-md w-5/12 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-300">
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <section class="bg-white py-20 lg:py-32">
     <div class="container mx-auto px-6 md:px-12 lg:px-6">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">Catálogo de Vuelos</h2>
@@ -111,7 +139,7 @@
                     <img src="https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2023/01/24/istock-1297090032.jpeg" alt="Vuelo a Madrid" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 15 de marzo, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $500</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -121,7 +149,7 @@
                     <img src="https://images.adsttc.com/media/images/5d44/14fa/284d/d1fd/3a00/003d/large_jpg/eiffel-tower-in-paris-151-medium.jpg?1564742900" alt="Vuelo a París" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 20 de abril, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $600</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton1" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -132,7 +160,7 @@
                     <img src="https://www.italia.it/content/dam/tdh/es/interests/lazio/roma/roma-in-48-ore/media/20220127150143-colosseo-roma-lazio-shutterstock-756032350.jpg" alt="Vuelo a Roma" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 10 de mayo, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $700</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton2" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -143,7 +171,7 @@
                     <img src="https://a.cdn-hotels.com/gdcs/production159/d204/01ae3fa0-c55c-11e8-9739-0242ac110006.jpg" alt="Vuelo a Canada" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 27 de mayo, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $700</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton3" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -154,7 +182,7 @@
                     <img src="https://static.nationalgeographicla.com/files/styles/image_3200/public/nationalgeographic2710344.jpg?w=1900&h=1272" alt="Vuelo a China" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 1 de Marzo, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $700</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton4" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -165,7 +193,7 @@
                     <img src="https://i.natgeofe.com/n/6c02ad5a-977b-4f12-b9c0-02ffb0736e07/metropolitan-cathedral-zocalo-mexico-city.JPG" alt="Vuelo a Mexico" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 18 de mayo, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $700</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton5" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -175,7 +203,7 @@
                     <img src="https://humanidades.com/wp-content/uploads/2018/09/Inglaterra-1-e1579225431994.jpg" alt="Vuelo a Inglaterra" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 27 de Abril, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $700</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton6" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -185,7 +213,7 @@
                     <img src="https://res.cloudinary.com/simpleview/image/upload/v1695147770/clients/panama/temp_d849b771-32f3-4060-8334-6a91f4f5c3f0.jpg" alt="Vuelo a Panama" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 27 de mayo, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $700</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton7" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -195,7 +223,7 @@
                     <img src="img/chile.jpg" alt="Vuelo a Chile" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 10 de Abril, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $700</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton8" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -205,7 +233,7 @@
                     <img src="img/rusia.jpeg" alt="Vuelo a Rusia" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 5 de Marzo, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $700</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton9" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -215,7 +243,7 @@
                     <img src="img/japon.jpeg" alt="Vuelo a Japon" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 27 de Febrero, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $700</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton10" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -225,7 +253,7 @@
                     <img src="img/francia.jpeg" alt="Vuelo a Francia" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 13 de abril, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $700</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton11" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
             
@@ -236,7 +264,7 @@
                     <img src="img/madagascar.jpg" alt="Vuelo a Rusia" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 15 de Octubre, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $1,500</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton12" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -246,7 +274,7 @@
                     <img src="img/corea.jpeg" alt="Vuelo a Japon" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 27 de Junio, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $800</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton13" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -256,7 +284,7 @@
                     <img src="img/senegal.jpeg" alt="Vuelo a Senegal" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 21 de abril, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $500</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton14" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>  
 
@@ -266,7 +294,7 @@
                     <img src="img/albania.jpeg" alt="Vuelo a Albania" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 20 de Septiembre, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $700</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton15" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -276,7 +304,7 @@
                     <img src="img/islandia.webp" alt="Vuelo a Islandia" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 30 de Marzo, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $1,000</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton16" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -286,7 +314,7 @@
                     <img src="img/tailandia.jpeg" alt="Vuelo a Tailandia class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 08 de Mayo, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $800</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton17" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
             
@@ -296,7 +324,7 @@
                     <img src="img/belgica.jpeg" alt="Vuelo a Belgica" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 15 de Noviembre, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $600</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton18" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -306,7 +334,7 @@
                     <img src="img/suiza.jpg" alt="Vuelo a Suiza" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 27 de Octubre, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $1,000</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton19" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -316,7 +344,7 @@
                     <img src="img/suecia.jpeg" alt="Vuelo a Suecia" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 22 de Julio, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $1,300</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton20" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>  
 
@@ -326,7 +354,7 @@
                     <img src="img/peru.jpeg" alt="Vuelo a Peru" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 15 de Noviembre, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $600</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton21" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -336,7 +364,7 @@
                     <img src="img/australia.jpeg" alt="Vuelo a Australia" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 27 de Octubre, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $1,000</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton22" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>
 
@@ -346,7 +374,7 @@
                     <img src="img/honduras.jpeg" alt="Vuelo a Honduras" class="w-full h-40 object-cover object-center">
                     <p class="text-base text-gray-600 leading-loose mb-4">Salida: 22 de Julio, 2024</p>
                     <p class="text-base text-gray-600 leading-loose mb-4">Precio: $700</p>
-                    <button class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Ver detalles</button>
+                    <button id="boton23" class="bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-primaryLight transition duration-300">Reservar</button>
                 </div>
             </div>  
     
@@ -447,5 +475,12 @@
 				</a>
 			</div>
 		</div>
+        
 	</div>
 </footer>
+<body>
+    <script src="../pages/js/script.js"></script> 
+</body>
+
+
+        
